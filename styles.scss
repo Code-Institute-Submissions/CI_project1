@@ -1,0 +1,152 @@
+$colors: (primary: #000000,
+    accent1: #d72323,
+    accent2: #323539,
+    textColor: #f1ecec,
+    linkHover: #fffdfdb7);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+;
+
+* {
+    scroll-behavior: smooth;
+}
+
+;
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: color(accent2);
+    color: color(textColor);
+    margin: 0;
+    padding: 0;
+}
+
+;
+
+header {
+    height: 100vh;
+    overflow: hidden;
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+
+        .brand {
+
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+
+        .nav-links {
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            align-items: center;
+            margin-bottom: 0;
+            list-style: none;
+
+            a {
+                color: color(textColor);
+                text-decoration: none;
+
+                &:hover {
+                    color: color(linkHover);
+                }
+
+            }
+
+
+
+        }
+    }
+
+
+
+    .jumbotron {
+        height: 92vh;
+        background: url(./images/headerpic.png) no-repeat center;
+        background-size: cover;
+        padding: 0;
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-width: 100%;
+            background-color: rgba(#000000, $alpha: 0.65);
+            text-shadow: 3px 3px 5px black;
+
+            span {
+                color: color(accent1);
+                text-transform: uppercase;
+            }
+
+
+            h1 {
+                width: 60%;
+                padding-left: 30px;
+                align-self: flex-start;
+                font-family: 'Righteous', ;
+
+
+            }
+
+
+            p {
+                align-self: flex-start;
+                text-align: center;
+                padding-left: 30px;
+
+
+            }
+
+
+            a {
+                text-decoration: none;
+
+                i {
+                    color: color(textColor);
+                    font-size: 3.5rem;
+
+                    &:hover {
+                        color: color(accent1);
+                        transform: scale(1.5);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+    }
+}
+
+;
+
+
+
+section {
+    height: 100vh;
+}
