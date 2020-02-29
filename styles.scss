@@ -1,18 +1,23 @@
-$colors: (
-  primary: #000000,
+$colors: (primary: #000000,
   accent1: #d72323,
   accent2: #323539,
   textColor: #f1ecec,
-  linkHover: #fffdfdb7
-);
+  linkHover: #fffdfdb7,
+  linkHover2: #ff3232);
+
 
 @function color($color-name) {
-  @return map-get($colors, $color-name);
+  @return map-get($colors, $color-name)
 }
+
+;
 
 * {
   scroll-behavior: smooth;
 }
+
+;
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -22,52 +27,99 @@ body {
   padding: 0;
 }
 
-header {
-  height: 100vh;
-  overflow: hidden;
+nav {
+  background-color: color(accent2);
+  top: 0;
+  position: sticky;
+  box-shadow: 2px 2px 20px 0px rgba(10, 10, 10, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 9vh;
 
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 8vh;
 
-    .brand {
-      h4 {
-        font-weight: 'Righteous';
-        font-weight: bold;
-        margin-bottom: 0;
-      }
+  .brand {
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: 2px color(accent1) solid;
+    margin: 1em 0;
+
+    a {
+      text-decoration: none;
+
     }
 
-    .nav-links {
-      display: flex;
-      justify-content: space-evenly;
-      width: 50%;
-      align-items: center;
+
+    h4 {
+      font-family: 'Righteous';
+      letter-spacing: 1px;
+      padding: 0.2rem 0.3rem;
+      font-size: 2.2rem;
+      font-weight: bolder;
+      color: color(accent1);
       margin-bottom: 0;
-      list-style: none;
+    }
+  }
 
-      a {
-        font-weight: bold;
-        font-size: 1.3rem;
-        letter-spacing: 1px;
-        color: color(textColor);
-        text-decoration: none;
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 0;
+    list-style: none;
 
-        &:hover {
-          color: color(linkHover);
-        }
+    a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: color(textColor);
+      text-decoration: none;
+
+
+
+      &:hover {
+        color: color(linkHover);
       }
 
-    
+    }
+
+    #contactLink {
+      a {
+        font-size: 1.3rem;
+        color: color(accent1);
+        border-radius: 20px;
+        padding: 0.4rem 0.6rem;
+        border: 2px solid transparent;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          padding: 0.4rem 0.6rem;
+          border-radius: 20px;
+          border: 2px solid color(linkHover2);
+          color: color(linkHover2);
+        }
+      }
+    }
   }
+}
+
+
+
+header {
+  height: 91vh;
+  overflow: hidden;
+
+
+
+
 
   .jumbotron {
     height: 92vh;
     background: url(./images/headerpic.png) no-repeat center;
     background-size: cover;
     padding: 0;
+
 
     .container {
       display: flex;
@@ -76,7 +128,7 @@ header {
       align-items: center;
       height: 100%;
       min-width: 100%;
-      background-color: rgba(#000000, $alpha: 0.65);
+      background-color: rgba(#000000, $alpha: 0.55);
       text-shadow: 3px 3px 5px black;
 
       span {
@@ -84,18 +136,25 @@ header {
         text-transform: uppercase;
       }
 
+
       h1 {
         width: 60%;
         padding-left: 30px;
         align-self: flex-start;
-        font-family: 'Righteous';
+        font-family: 'Righteous', ;
+
+
       }
+
 
       p {
         align-self: flex-start;
         text-align: center;
         padding-left: 30px;
+
+
       }
+
 
       a {
         text-decoration: none;
@@ -115,6 +174,7 @@ header {
   }
 }
 
+
 section {
-  height: 100vh;
+  height: 91vh;
 }
