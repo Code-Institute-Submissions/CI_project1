@@ -1,13 +1,16 @@
 * {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #323539;
   color: #f1ecec;
-  margin: 0;
-  padding: 0;
 }
 
 nav {
@@ -41,8 +44,8 @@ nav .brand a {
 }
 
 nav .brand h4 {
-  font-family: 'Righteous';
-  letter-spacing: 1px;
+  font-family: 'Space Mono';
+  letter-spacing: 1.5px;
   padding: 0.2rem 0.3rem;
   font-size: 2.2rem;
   font-weight: bolder;
@@ -66,7 +69,8 @@ nav .nav-links {
 }
 
 nav .nav-links a {
-  font-size: 1.2rem;
+  font-family: 'Space Mono';
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 2px;
   color: #f1ecec;
@@ -78,6 +82,7 @@ nav .nav-links a:hover {
 }
 
 nav .nav-links #contactLink a {
+  font-weight: bolder;
   font-size: 1.3rem;
   color: #d72323;
   border-radius: 20px;
@@ -101,7 +106,8 @@ header {
 
 header .jumbotron {
   height: 92vh;
-  background: url(./images/headerpic.png) no-repeat center;
+  background: url(./images/heropic.png) no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
   padding: 0;
 }
@@ -127,6 +133,8 @@ header .jumbotron .container {
 }
 
 header .jumbotron .container span {
+  font-family: 'Space Mono';
+  font-size: 1em;
   color: #d72323;
   text-transform: uppercase;
 }
@@ -164,6 +172,57 @@ header .jumbotron .container a i:hover {
 }
 
 section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/section1bg.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/section1bg.png) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 91vh;
+}
+
+section .container {
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .container h4 {
+  margin-top: 0.2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section .container .underline {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-bottom: 2px solid #d72323;
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+section .container .about-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .container .about-1 img {
+  height: 100%;
+  width: 50%;
 }
 /*# sourceMappingURL=styles.css.map */

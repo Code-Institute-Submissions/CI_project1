@@ -13,7 +13,11 @@ $colors: (primary: #000000,
 ;
 
 * {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 ;
@@ -23,8 +27,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: color(accent2);
   color: color(textColor);
-  margin: 0;
-  padding: 0;
 }
 
 nav {
@@ -51,8 +53,8 @@ nav {
 
 
     h4 {
-      font-family: 'Righteous';
-      letter-spacing: 1px;
+      font-family: 'Space Mono';
+      letter-spacing: 1.5px;
       padding: 0.2rem 0.3rem;
       font-size: 2.2rem;
       font-weight: bolder;
@@ -70,7 +72,8 @@ nav {
     list-style: none;
 
     a {
-      font-size: 1.2rem;
+      font-family: 'Space Mono';
+      font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 2px;
       color: color(textColor);
@@ -86,6 +89,7 @@ nav {
 
     #contactLink {
       a {
+        font-weight: bolder;
         font-size: 1.3rem;
         color: color(accent1);
         border-radius: 20px;
@@ -116,7 +120,8 @@ header {
 
   .jumbotron {
     height: 92vh;
-    background: url(./images/headerpic.png) no-repeat center;
+    background: url(./images/heropic.png) no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     padding: 0;
 
@@ -132,6 +137,8 @@ header {
       text-shadow: 3px 3px 5px black;
 
       span {
+        font-family: 'Space Mono';
+        font-size: 1em;
         color: color(accent1);
         text-transform: uppercase;
       }
@@ -176,5 +183,49 @@ header {
 
 
 section {
+  background: linear-gradient(rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)), url(./images/section1bg.png) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   height: 91vh;
+
+  .container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+      margin-top: 0.2rem;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .underline {
+      align-self: center;
+      border-bottom: 2px solid color(accent1);
+      width: 30%;
+      margin-bottom: 3rem;
+    }
+
+    .about-1 {
+
+      display: flex;
+
+
+      img {
+        height: 100%;
+        width: 50%;
+      }
+
+    }
+
+    .about-2 {}
+
+    .about-3 {}
+
+  }
 }
