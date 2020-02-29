@@ -201,6 +201,7 @@ section .container {
 }
 
 section .container h4 {
+  font-family: 'Space Mono';
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
