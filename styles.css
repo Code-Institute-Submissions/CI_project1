@@ -28,6 +28,8 @@ header nav {
 }
 
 header nav .brand h4 {
+  font-weight: 'Righteous';
+  font-weight: bold;
   margin-bottom: 0;
 }
 
@@ -47,12 +49,19 @@ header nav .nav-links {
 }
 
 header nav .nav-links a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
   color: #f1ecec;
   text-decoration: none;
 }
 
 header nav .nav-links a:hover {
   color: #fffdfdb7;
+}
+
+header nav .nav-links .contact-link {
+  color: #d72323;
 }
 
 header .jumbotron {
@@ -92,7 +101,7 @@ header .jumbotron .container h1 {
   padding-left: 30px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-family: "Righteous";
+  font-family: 'Righteous';
 }
 
 header .jumbotron .container p {
