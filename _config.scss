@@ -1,0 +1,16 @@
+$colors: (primary: #000000,
+  accent1: #e03a3a,
+  accent2: #323539,
+  textColor: #f1ecec,
+  linkHover: #fffdfdf3,
+  linkHover2: #ff3232,
+  filler: #444444);
+ 
+
+$text-shadow: 3px 3px 5px rgb(29, 29, 29);
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+};
+
