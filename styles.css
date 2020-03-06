@@ -1,3 +1,32 @@
+.underline {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-bottom: 2px solid #e03a3a;
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+h4, #pricing .container h4 {
+  font-family: 'Space Mono';
+  margin-top: 0.2rem;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 3px 3px 5px #1d1d1d;
+}
+
+span {
+  font-size: 1em;
+  color: #e03a3a;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 13px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,25 +59,28 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 9vh;
+  z-index: 2;
 }
 
 nav .brand {
+  max-height: 9vh;
   -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   border: 2px #e03a3a solid;
-  margin: 1em 0;
+  margin: 20px 0;
+  position: relative;
 }
 
 nav .brand a {
   text-decoration: none;
 }
 
-nav .brand h4 {
+nav .brand h4, nav .brand #pricing .container h4, #pricing .container nav .brand h4 {
   font-family: 'Space Mono';
   letter-spacing: 1.5px;
   padding: 0.2rem 0.3rem;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bolder;
   color: #e03a3a;
   margin-bottom: 0;
@@ -112,19 +144,22 @@ nav .nav-links #contactLink a:hover {
 }
 
 header {
-  height: 91vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 header .jumbotron {
-  height: 92vh;
-  background: url(./images/heropic.png) no-repeat center;
+  margin-bottom: 0;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/heropic.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/heropic.png) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   padding: 0;
 }
 
 header .jumbotron .container {
+  padding-top: 9vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,9 +173,6 @@ header .jumbotron .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
   text-shadow: 3px 3px 5px #1d1d1d;
 }
 
@@ -236,7 +268,7 @@ header .jumbotron .container a i:hover {
   font-size: 1.5rem;
 }
 
-#section1 {
+#about {
   padding-top: 9vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/section1bg.png) no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/section1bg.png) no-repeat center;
@@ -249,10 +281,11 @@ header .jumbotron .container a i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 91vh;
+  min-height: 100vh;
+  padding-bottom: 9vh;
 }
 
-#section1 .container {
+#about .container {
   margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,7 +299,7 @@ header .jumbotron .container a i:hover {
           justify-content: center;
 }
 
-#section1 .container h4 {
+#about .container h4 {
   font-family: 'Space Mono';
   margin-top: 0.2rem;
   font-size: 3rem;
@@ -274,13 +307,13 @@ header .jumbotron .container a i:hover {
   text-shadow: 3px 3px 5px #1d1d1d;
 }
 
-#section1 .container h4 span {
+#about .container h4 span {
   font-size: 1em;
   color: #e03a3a;
   text-transform: uppercase;
 }
 
-#section1 .container .underline {
+#about .container .underline {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -289,19 +322,44 @@ header .jumbotron .container a i:hover {
   margin-bottom: 3rem;
 }
 
-#section1 .container .about {
+#about .container .about {
+  min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 1.5rem 0;
   -webkit-box-shadow: 10px 12px 16px -7px rgba(0, 0, 0, 0.68);
           box-shadow: 10px 12px 16px -7px rgba(0, 0, 0, 0.68);
 }
 
-#section1 .container .about .about-text {
+#about .container .about .about-img1 {
+  width: 50%;
+  background: url(./images/ourteam-pexels.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#about .container .about .about-img2 {
+  width: 50%;
+  background: url(./images/location-pexels.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#about .container .about .about-img3 {
+  width: 50%;
+  background: url(./images/pricing-pexels.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#about .container .about .about-text {
+  width: 50%;
   text-shadow: 3px 3px 5px #302f2f;
   background-color: rgba(180, 168, 168, 0.466);
-  padding: 0 2em;
+  padding: 1rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,9 +373,10 @@ header .jumbotron .container a i:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
-#section1 .container .about .about-text h3 {
+#about .container .about .about-text h3 {
   letter-spacing: 2px;
   font-weight: bolder;
   color: #e03a3a;
@@ -325,14 +384,14 @@ header .jumbotron .container a i:hover {
   border-bottom: thin double;
 }
 
-#section1 .container .about .about-text p {
+#about .container .about .about-text p {
   text-align: center;
   font-weight: 400;
 }
 
-#section1 .container .about .about-text .btn {
-  font-weight: bolder;
-  font-size: 1.2rem;
+#about .container .about .about-text .btn {
+  margin-bottom: 10px;
+  font-weight: 700;
   color: #ff3232;
   border-radius: 25px;
   padding: 0.4rem 0.6rem;
@@ -341,12 +400,14 @@ header .jumbotron .container a i:hover {
   transition: all 0.5s ease-in-out;
 }
 
-#section1 .container .about .about-text .btn span {
+#about .container .about .about-text .btn span {
   margin: 0 3px;
   display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-#section1 .container .about .about-text .btn:hover {
+#about .container .about .about-text .btn:hover {
   background-color: #ff3232;
   padding: 0.4rem 0.6rem;
   border-radius: 25px;
@@ -356,8 +417,140 @@ header .jumbotron .container a i:hover {
           box-shadow: 10px 12px 16px -7px rgba(0, 0, 0, 0.68);
 }
 
-#section1 .container .about img {
-  height: 100%;
+#about .container .about .about-text .btn:hover span {
+  color: #fffdfdf3;
+}
+
+#pricing {
+  padding-top: 9vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/pricingbg-pexels.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/pricingbg-pexels.png) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+#pricing .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pricing .container .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+#pricing .container .price-container .price-card {
+  position: relative;
+  background-color: rgba(180, 168, 168, 0.5);
+  -webkit-box-shadow: 0 0 10px #00000070;
+          box-shadow: 0 0 10px #00000070;
+  margin: 20px 20px;
+  width: 100%;
+  text-shadow: 3px 3px 5px #1d1d1d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 400px;
+  max-width: 320px;
+  overflow: hidden;
+}
+
+#pricing .container .price-container .price-card .pop {
   width: 50%;
+  background-color: #e03a3a;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  padding: 10px 40px;
+  position: absolute;
+  top: 5px;
+  right: -40px;
+}
+
+#pricing .container .price-container .price-card .underline {
+  margin-bottom: 0rem;
+}
+
+#pricing .container .price-container .price-card .plan-name {
+  padding-top: 0.7rem;
+}
+
+#pricing .container .price-container .price-card .plan-name h1 {
+  margin-bottom: 0;
+  text-shadow: 3px 3px 5px #1d1d1d;
+  font-size: 2rem;
+}
+
+#pricing .container .price-container .price-card .price p strong {
+  font-size: 3rem;
+}
+
+#pricing .container .price-container .price-card .price p span {
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+}
+
+#pricing .container .price-container .price-card .description {
+  margin-bottom: 1rem;
+}
+
+#pricing .container .price-container .price-card .description li {
+  list-style: none;
+}
+
+#pricing .container .price-container .price-card a {
+  font-weight: 700;
+  color: #f1ecec;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid red;
+  border-radius: 1.5em;
+  background-color: #e03a3a;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#pricing .container .price-container .price-card a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #ff3232;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

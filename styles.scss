@@ -1,4 +1,5 @@
 @import "./config";
+@import "./media";
 
 
 
@@ -29,13 +30,16 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 9vh;
+  z-index: 2;
 
 
   .brand {
+    max-height: 9vh;
     box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     border: 2px color(accent1) solid;
-    margin: 1em 0;
+    margin: 20px 0;
+    position: relative;
 
     a {
       text-decoration: none;
@@ -47,7 +51,7 @@ nav {
       font-family: 'Space Mono';
       letter-spacing: 1.5px;
       padding: 0.2rem 0.3rem;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: bolder;
       color: color(accent1);
       margin-bottom: 0;
@@ -112,7 +116,7 @@ nav {
 
 
 header {
-  height: 91vh;
+  min-height: 100vh;
   overflow: hidden;
 
 
@@ -120,21 +124,21 @@ header {
 
 
   .jumbotron {
-    height: 92vh;
-    background: url(./images/heropic.png) no-repeat center;
+    margin-bottom: 0;
+    min-height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.75)), url(./images/heropic.png) no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     padding: 0;
 
 
     .container {
+      padding-top: 9vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
-      min-width: 100%;
-      background-color: rgba(#000000, $alpha: 0.55);
       text-shadow: $text-shadow;
 
       span {
@@ -217,7 +221,7 @@ header {
 }
 
 
-#section1 {
+#about {
   padding-top: 9vh;
   background: linear-gradient(rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)), url(./images/section1bg.png) no-repeat center;
@@ -226,7 +230,8 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  min-height: 91vh;
+  min-height: 100vh;
+  padding-bottom: 9vh;
 
   .container {
     
@@ -260,19 +265,45 @@ header {
     }
 
     .about {
+      min-height: 200px;
       display: flex;
+      flex-wrap: wrap;
       margin: 1.5rem 0;
       box-shadow: 10px 12px 16px -7px rgba(0,0,0,0.68);
 
+      .about-img1 {
+        width: 50%;
+        background: url(./images/ourteam-pexels.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+         }
+
+      .about-img2 {
+      width: 50%;
+      background: url(./images/location-pexels.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+        }
+
+      .about-img3 {
+      width: 50%;
+      background: url(./images/pricing-pexels.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+        }
+
+
 
       .about-text {
+        width: 50%;
         text-shadow: 3px 3px 5px rgb(48, 47, 47);
         background-color: rgba(180, 168, 168, 0.466);
-        padding: 0 2em;
+        padding: 1rem 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         h3 {
           letter-spacing: 2px;
@@ -288,8 +319,8 @@ header {
         }
 
         .btn {
-          font-weight: bolder;
-          font-size: 1.2rem;
+          margin-bottom: 10px;
+          font-weight: 700;
           color: color(linkHover2);
           border-radius: 25px;
           padding: 0.4rem 0.6rem;
@@ -299,6 +330,7 @@ header {
           span {
             margin: 0 3px;
             display: inline-block;
+            transition: all 0.5s ease-in-out;
           }
         
   
@@ -310,18 +342,135 @@ header {
             border: 2px solid color(linkHover2);
             color: color(linkHover);
             box-shadow: 10px 12px 16px -7px rgba(0,0,0,0.68);
+
+            span {
+              color: color(linkHover);
+            }
+          
+    
           }
         }
          
-      }
-
-
-      img {
-        height: 100%;
-        width: 50%;
       }
 
     }
 
   }
 }
+
+#pricing {
+  padding-top: 9vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.75),
+  rgba(0, 0, 0, 0.75)), url(./images/pricingbg-pexels.png) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+
+
+  .container {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    h4 {
+      @extend h4;
+    }
+
+    .price-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+
+      .price-card {
+        position: relative;
+        background-color:rgba(180, 168, 168, 0.5);
+        box-shadow: 0 0 10px #00000070;
+        margin: 20px 20px;
+        width: 100%;
+  
+        text-shadow: $text-shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        min-height: 400px;
+        max-width: 320px;
+        overflow: hidden;
+
+        .pop {
+         width: 50%;
+          background-color: color(accent1);
+          transform: rotate(40deg);
+          padding: 10px 40px;
+          position: absolute;
+          top: 5px;
+          right: -40px;
+        }
+
+        .underline {
+          margin-bottom: 0rem;
+        }
+
+        .plan-name {
+          padding-top:  0.7rem;
+
+          h1 {
+            margin-bottom: 0;
+            text-shadow: $text-shadow;
+            font-size: 2rem;
+          }
+        }
+
+        .price {
+        
+          p {
+            strong{
+              font-size: 3rem;
+            }
+
+            span {
+              font-weight: 600;
+              font-size: 1rem;
+              display: block;
+            }
+          }
+        }
+
+        .description {
+          margin-bottom: 1rem;
+           li {
+             list-style: none;
+           }
+        }
+
+        a {
+          font-weight: 700;
+          color: color(textColor);
+          margin-bottom: 1rem;
+          padding: 0.5rem 1.5rem;
+          border: 2px solid red;
+          border-radius: 1.5em;
+          background-color: color(accent1);
+          transition: 0.3s ease;
+          
+          &:hover {
+            transform: scale(1.05);
+            background-color: color(linkHover2);
+            text-decoration: none;
+
+           ;
+          }
+        }
+      }
+    }
+  }
+}
+

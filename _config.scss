@@ -14,3 +14,29 @@ $text-shadow: 3px 3px 5px rgb(29, 29, 29);
   @return map-get($colors, $color-name)
 };
 
+.underline {
+  align-self: center;
+  border-bottom: 2px solid color(accent1);
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+
+h4 {
+    font-family: 'Space Mono';
+    margin-top: 0.2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: $text-shadow;
+ }
+
+span {
+      font-size: 1em;
+      color: color(accent1);
+      text-transform: uppercase;
+     
+}
+
+
+  
+
