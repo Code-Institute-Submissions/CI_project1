@@ -38,5 +38,26 @@ span {
 }
 
 
-  
+input::placeholder {
+  color: color(textColor) !important; 
+  opacity: 0.6 !important; 
+}
 
+
+textarea::placeholder {
+  color: color(textColor) !important; 
+  opacity: 0.6 !important; 
+}
+
+@-webkit-keyframes autofill {
+  0%,100% {
+      color: color(textColor);
+      background: color(accent2);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
