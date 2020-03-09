@@ -8,7 +8,7 @@
 }
 
 h4, #pricing .container h4 {
-  font-family: 'Space Mono';
+  font-family: 'Quicksand';
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
@@ -24,6 +24,25 @@ span {
 @media screen and (max-width: 700px) {
   * {
     font-size: 13px;
+  }
+  .about-img1 {
+    display: none;
+  }
+  .about-img2 {
+    display: none;
+  }
+  .about-img2 {
+    display: none;
+  }
+  .about .about-text {
+    width: 100% !important;
+  }
+  .btn {
+    background-color: #e03a3a;
+    border: 2px solid #e03a3a;
+  }
+  .btn span {
+    color: #f1ecec;
   }
 }
 
@@ -77,7 +96,7 @@ nav .brand a {
 }
 
 nav .brand h4, nav .brand #pricing .container h4, #pricing .container nav .brand h4 {
-  font-family: 'Space Mono';
+  font-family: 'Quicksand';
   letter-spacing: 1.5px;
   padding: 0.2rem 0.3rem;
   font-size: 1.8rem;
@@ -109,7 +128,7 @@ nav .nav-links li:hover {
 }
 
 nav .nav-links a {
-  font-family: 'Space Mono';
+  font-family: 'Quicksand';
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2px;
@@ -177,7 +196,7 @@ header .jumbotron .container {
 }
 
 header .jumbotron .container span {
-  font-family: 'Space Mono';
+  font-family: 'Quicksand';
   font-size: 1em;
   color: #e03a3a;
   text-transform: uppercase;
@@ -300,7 +319,7 @@ header .jumbotron .container a i:hover {
 }
 
 #about .container h4 {
-  font-family: 'Space Mono';
+  font-family: 'Quicksand';
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
@@ -540,7 +559,7 @@ header .jumbotron .container a i:hover {
   color: #f1ecec;
   margin-bottom: 1rem;
   padding: 0.5rem 1.5rem;
-  border: 2px solid red;
+  border: 2px solid #e03a3a;
   border-radius: 1.5em;
   background-color: #e03a3a;
   -webkit-transition: 0.3s ease;
@@ -552,5 +571,9 @@ header .jumbotron .container a i:hover {
           transform: scale(1.05);
   background-color: #ff3232;
   text-decoration: none;
+}
+
+#pricing .container .popular {
+  background-color: rgba(187, 178, 178, 0.65) !important;
 }
 /*# sourceMappingURL=styles.css.map */
