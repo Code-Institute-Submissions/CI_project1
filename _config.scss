@@ -1,18 +1,18 @@
-$colors: (primary: #000000,
+$colors: (
+  primary: #000000,
   accent1: #e03a3a,
   accent2: #323539,
   textColor: #f1ecec,
   linkHover: #fffdfdf3,
   linkHover2: #ff3232,
-  filler: #444444);
- 
+  filler: #444444
+);
 
-$text-shadow: 3px 3px 5px rgb(29, 29, 29);
-
+$text-shadow: 2px 2px 5px rgb(36, 36, 36);
 
 @function color($color-name) {
-  @return map-get($colors, $color-name)
-};
+  @return map-get($colors, $color-name);
+}
 
 .underline {
   align-self: center;
@@ -21,43 +21,40 @@ $text-shadow: 3px 3px 5px rgb(29, 29, 29);
   margin-bottom: 3rem;
 }
 
-
 h4 {
-    font-family: 'Quicksand';
-    margin-top: 0.2rem;
-    font-size: 3rem;
-    text-align: center;
-    text-shadow: $text-shadow;
- }
+  font-family: 'Quicksand';
+  margin-top: 0.2rem;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: $text-shadow;
+}
 
 span {
-      font-size: 1em;
-      color: color(accent1);
-      text-transform: uppercase;
-     
+  font-size: 1em;
+  color: color(accent1);
+  text-transform: uppercase;
 }
-
 
 input::placeholder {
-  color: color(textColor) !important; 
-  opacity: 0.6 !important; 
+  color: color(textColor) !important;
+  opacity: 0.6 !important;
 }
-
 
 textarea::placeholder {
-  color: color(textColor) !important; 
-  opacity: 0.6 !important; 
+  color: color(textColor) !important;
+  opacity: 0.6 !important;
 }
 
-@-webkit-keyframes autofill {
-  0%,100% {
-      color: color(textColor);
-      background: color(accent2);
+@keyframes autofill {
+  0%,
+  100% {
+    color: color(textColor);
+    background: color(accent2);
   }
 }
 
 input:-webkit-autofill {
-  -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-name: autofill;
+  animation-fill-mode: both;
 }

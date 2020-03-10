@@ -12,7 +12,7 @@ h4, #pricing .container h4, #contact .container h4 {
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
 }
 
 span {
@@ -62,7 +62,16 @@ textarea::placeholder {
 }
 
 @-webkit-keyframes autofill {
-  0%, 100% {
+  0%,
+  100% {
+    color: #f1ecec;
+    background: #323539;
+  }
+}
+
+@keyframes autofill {
+  0%,
+  100% {
     color: #f1ecec;
     background: #323539;
   }
@@ -70,9 +79,11 @@ textarea::placeholder {
 
 input:-webkit-autofill {
   -webkit-animation-delay: 1s;
-  /* Safari support - any positive time runs instantly */
+          animation-delay: 1s;
   -webkit-animation-name: autofill;
+          animation-name: autofill;
   -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @media screen and (max-width: 700px) {
@@ -109,6 +120,10 @@ input:-webkit-autofill {
   font-size: 16px;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #323539;
@@ -135,28 +150,24 @@ nav {
   z-index: 2;
 }
 
-nav .brand {
+nav .logo {
   max-height: 9vh;
   -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   border: 2px #e03a3a solid;
-  margin: 20px 0;
-  position: relative;
+  margin: 0;
 }
 
-nav .brand a {
-  text-decoration: none;
-}
-
-nav .brand h4, nav .brand #pricing .container h4, #pricing .container nav .brand h4, nav .brand #contact .container h4, #contact .container nav .brand h4 {
+nav .logo a {
   font-family: 'Quicksand';
   letter-spacing: 1.5px;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem;
   font-size: 1.8rem;
   font-weight: bolder;
   color: #e03a3a;
   margin-bottom: 0;
+  text-decoration: none;
 }
 
 nav .nav-links {
@@ -192,7 +203,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
   color: #fffdfdf3;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
 }
 
 nav .nav-links #contactLink a {
@@ -217,13 +228,22 @@ nav .nav-links #contactLink a:hover {
 }
 
 header {
-  min-height: 100vh;
+  min-height: 91vh;
   overflow: hidden;
 }
 
 header .jumbotron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 0;
-  min-height: 100vh;
+  min-height: 91vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/heropic.png) no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/heropic.png) no-repeat center;
   background-attachment: fixed;
@@ -232,7 +252,6 @@ header .jumbotron {
 }
 
 header .jumbotron .container {
-  padding-top: 9vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +265,7 @@ header .jumbotron .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
 }
 
 header .jumbotron .container span {
@@ -261,7 +280,6 @@ header .jumbotron .container h1 {
   padding-left: 30px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-family: "Righteous";
 }
 
 header .jumbotron .container p {
@@ -370,6 +388,9 @@ header .jumbotron .container a i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #about .container h4 {
@@ -377,7 +398,7 @@ header .jumbotron .container a i:hover {
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
 }
 
 #about .container h4 span {
@@ -396,6 +417,7 @@ header .jumbotron .container a i:hover {
 }
 
 #about .container .about {
+  max-width: 80%;
   min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,7 +476,6 @@ header .jumbotron .container a i:hover {
   font-weight: bolder;
   color: #e03a3a;
   font-family: 'Roboto';
-  border-bottom: thin double;
 }
 
 #about .container .about .about-text p {
@@ -465,7 +486,6 @@ header .jumbotron .container a i:hover {
 #about .container .about .about-text .btn {
   margin-bottom: 10px;
   font-weight: 700;
-  color: #ff3232;
   border-radius: 25px;
   padding: 0.4rem 0.6rem;
   border: 2px solid #e03a3a;
@@ -474,6 +494,7 @@ header .jumbotron .container a i:hover {
 }
 
 #about .container .about .about-text .btn span {
+  color: #f1ecec;
   margin: 0 3px;
   display: inline-block;
   -webkit-transition: all 0.5s ease-in-out;
@@ -545,7 +566,7 @@ header .jumbotron .container a i:hover {
           box-shadow: 0 0 10px #00000070;
   margin: 20px 20px;
   width: 100%;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,7 +607,7 @@ header .jumbotron .container a i:hover {
 
 #pricing .container .price-container .price-card .plan-name h1 {
   margin-bottom: 0;
-  text-shadow: 3px 3px 5px #1d1d1d;
+  text-shadow: 2px 2px 5px #242424;
   font-size: 2rem;
 }
 
@@ -644,7 +665,11 @@ header .jumbotron .container a i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
+  padding-bottom: 9vh;
 }
 
 #contact .container {
@@ -671,7 +696,12 @@ header .jumbotron .container a i:hover {
   font-size: 1.7rem;
 }
 
+#contact .container p {
+  text-align: center;
+}
+
 #contact .container .underline {
+  width: 20%;
   margin-bottom: 1rem;
 }
 
@@ -720,5 +750,44 @@ header .jumbotron .container a i:hover {
   border-color: #e03a3a;
   -webkit-box-shadow: 0 0 0 0.2rem #e03a3a96;
           box-shadow: 0 0 0 0.2rem #e03a3a96;
+}
+
+#footer {
+  background: -webkit-gradient(linear, right top, left top, from(#131313), to(#303030));
+  background: linear-gradient(to left, #131313, #303030);
+}
+
+#footer .container-fluid {
+  height: 80vh;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+#footer .container-fluid .map {
+  height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#footer .container-fluid .map img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+#footer .container-fluid .foot {
+  background: -webkit-gradient(linear, left top, right top, from(#131313), color-stop(#303030), to(#131313));
+  background: linear-gradient(to right, #131313, #303030, #131313);
 }
 /*# sourceMappingURL=styles.css.map */

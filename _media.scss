@@ -1,39 +1,32 @@
 @media screen and (max-width: 700px) {
-    * {
-     font-size: 13px;
-      }
-
-      .about-img1 {
-       display: none;
-         }
-
-      .about-img2 {
-       display: none;
-         }
-
-      .about-img2 {
-       display: none;
-         }
-
-      .about {
-          .about-text {
-              width: 100% !important;
-          }
-      }
-
-      .btn {
-        background-color: color(accent1);
-        border: 2px solid color(accent1);
-
-        span {
-          color: color(textColor);
-        }
-      }
-     
-     
-    
-
-      
-  
-  
+  * {
+    font-size: 13px;
   }
+
+  .about-img1 {
+    display: none;
+  }
+
+  .about-img2 {
+    display: none;
+  }
+
+  .about-img2 {
+    display: none;
+  }
+
+  .about {
+    .about-text {
+      width: 100% !important;
+    }
+  }
+
+  .btn {
+    background-color: color(accent1);
+    border: 2px solid color(accent1);
+
+    span {
+      color: color(textColor);
+    }
+  }
+}
