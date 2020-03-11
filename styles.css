@@ -12,7 +12,7 @@ h4, #pricing .container h4, #contact .container h4 {
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
 }
 
 span {
@@ -149,13 +149,16 @@ nav {
   z-index: 2;
 }
 
+nav .burger {
+  display: none;
+}
+
 nav .logo {
   max-height: 9vh;
   -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   border: 2px #e03a3a solid;
-  margin: 0;
 }
 
 nav .logo a {
@@ -173,9 +176,8 @@ nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -202,7 +204,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
   color: #fffdfdf3;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
 }
 
 nav .nav-links #contactLink a {
@@ -243,10 +245,11 @@ header .jumbotron {
           align-items: center;
   margin-bottom: 0;
   min-height: 91vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/heropic.png) no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/heropic.png) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/section1bg.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/section1bg.png) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  background-position: top;
   padding: 0;
 }
 
@@ -264,7 +267,7 @@ header .jumbotron .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
 }
 
 header .jumbotron .container span {
@@ -360,10 +363,11 @@ header .jumbotron .container a i:hover {
 
 #about {
   padding-top: 9vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/section1bg.png) no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/section1bg.png) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/headerpic-pexels.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/headerpic-pexels.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  background-position: top;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,7 +401,7 @@ header .jumbotron .container a i:hover {
   margin-top: 0.2rem;
   font-size: 3rem;
   text-align: center;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
 }
 
 #about .container h4 span {
@@ -516,9 +520,10 @@ header .jumbotron .container a i:hover {
 
 #pricing {
   padding-top: 9vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/pricingbg-pexels.png) no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/pricingbg-pexels.png) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/pricingbg-pexels.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/pricingbg-pexels.png) no-repeat center;
   background-attachment: fixed;
+  background-position: top;
   background-size: cover;
   width: 100%;
   display: -webkit-box;
@@ -565,7 +570,7 @@ header .jumbotron .container a i:hover {
           box-shadow: 0 0 10px #00000070;
   margin: 20px 20px;
   width: 100%;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,8 +610,10 @@ header .jumbotron .container a i:hover {
 }
 
 #pricing .container .price-container .price-card .plan-name h1 {
+  letter-spacing: 1px;
+  font-weight: bold;
   margin-bottom: 0;
-  text-shadow: 2px 2px 5px #242424;
+  text-shadow: 1.5px 1.5px 5px #242424;
   font-size: 2rem;
 }
 
@@ -615,7 +622,8 @@ header .jumbotron .container a i:hover {
 }
 
 #pricing .container .price-container .price-card .price p span {
-  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f1ecec;
   font-size: 1rem;
   display: block;
 }
@@ -648,15 +656,16 @@ header .jumbotron .container a i:hover {
 }
 
 #pricing .container .popular {
-  background-color: rgba(187, 178, 178, 0.65) !important;
+  background-color: rgba(173, 102, 102, 0.65) !important;
 }
 
 #contact {
   padding-top: 9vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(./images/contact-pexels.png) no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/contact-pexels.png) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/contact-pexels.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/contact-pexels.png) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  background-position: top;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
