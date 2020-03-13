@@ -97,6 +97,7 @@ input:-webkit-autofill {
 html,
 body {
   overflow-x: hidden;
+  position: relative;
 }
 
 html {
@@ -849,9 +850,6 @@ header .jumbotron .container a i:hover {
 @media screen and (max-width: 768px) {
   * {
     font-size: 13px;
-  }
-  body {
-    overflow-x: hidden;
   }
   nav .burger {
     display: block !important;
