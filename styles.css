@@ -838,6 +838,7 @@ header .jumbotron .container a i:hover {
       align-self: flex-end;
   text-align: center;
   padding-bottom: 0.5rem;
+  font-size: 0.6rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -864,6 +865,7 @@ header .jumbotron .container a i:hover {
     background-color: #e03a3a;
   }
   nav .nav-links {
+    padding: 3rem 0;
     position: absolute;
     right: 0px;
     height: 91vh;
@@ -939,7 +941,7 @@ header .jumbotron .container a i:hover {
         grid-template-rows: 1fr 1fr;
   }
   #footer .container-fluid .foot .logo {
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
 }
 
