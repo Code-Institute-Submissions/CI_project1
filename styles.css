@@ -96,6 +96,7 @@ input:-webkit-autofill {
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -108,8 +109,7 @@ nav {
   background: -webkit-gradient(linear, right top, left top, from(#131313), to(#303030));
   background: linear-gradient(to left, #131313, #303030);
   top: 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   -webkit-box-shadow: 3px 3px 20px 0px rgba(10, 10, 10, 0.3);
           box-shadow: 3px 3px 20px 0px rgba(10, 10, 10, 0.3);
   display: -webkit-box;
@@ -121,6 +121,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 9vh;
+  width: 100%;
   z-index: 2;
 }
 
@@ -229,7 +230,7 @@ header .jumbotron {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
-  min-height: 91vh;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/section1bg.png) no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/section1bg.png) no-repeat center;
   background-attachment: fixed;
@@ -839,6 +840,10 @@ header .jumbotron .container a i:hover {
   text-align: center;
   padding-bottom: 0.5rem;
   font-size: 0.6rem;
+}
+
+.page {
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
