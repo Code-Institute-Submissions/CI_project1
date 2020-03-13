@@ -7,10 +7,9 @@
   box-sizing: border-box;
 }
 
-// html {
-//   height: 100%;
-//   width: 100%;
-// }
+html {
+  height: 100%;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -19,6 +18,7 @@ body {
 }
 
 nav {
+  // background: linear-gradient(to left, #232526, #414345);
   background: linear-gradient(to left, #131313, #303030);
   top: 0;
   position: sticky;
@@ -27,7 +27,6 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 9vh;
-  width: 100%;
   z-index: 2;
 
   .burger {
@@ -112,13 +111,17 @@ nav {
 }
 
 header {
+  min-height: 91vh;
+  overflow: hidden;
+
   .jumbotron {
-    min-height: 91vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    min-height: 100vh;
+    min-height: 91vh;
+    // background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    //   url(./images/headerpic-pexels.jpg) no-repeat center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(./images/section1bg.png) no-repeat center;
     background-attachment: fixed;
@@ -192,6 +195,14 @@ header {
     h1 {
       font-family: 'Quicksand';
     }
+
+    // p {
+    //   font-style: italic;
+    //   font-family: 'Roboto';
+    //   font-weight: bold;
+    //   text-align: center;
+    //   font-size: 1.5rem;
+    // }
 
     .blockquote-footer {
       color: #f1ececa8;

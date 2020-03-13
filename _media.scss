@@ -3,7 +3,6 @@
     font-size: 13px;
   }
 
-  html,
   body {
     overflow-x: hidden;
   }
@@ -69,7 +68,6 @@
   }
 
   .jumbotron {
-    height: 91vh;
     .container {
       .display-3 {
         width: 80%;
@@ -117,16 +115,6 @@
         }
       }
     }
-  }
-
-  .jumbotron,
-  #pricing,
-  #footer,
-  #about,
-  #contact {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center !important;
   }
 }
 

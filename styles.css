@@ -94,6 +94,10 @@ input:-webkit-autofill {
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #323539;
@@ -117,7 +121,6 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 9vh;
-  width: 100%;
   z-index: 2;
 }
 
@@ -210,8 +213,12 @@ nav .nav-links #contactLink a:hover {
           box-shadow: 10px 12px 16px -7px rgba(0, 0, 0, 0.68);
 }
 
-header .jumbotron {
+header {
   min-height: 91vh;
+  overflow: hidden;
+}
+
+header .jumbotron {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,7 +229,7 @@ header .jumbotron {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
-  min-height: 100vh;
+  min-height: 91vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images/section1bg.png) no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/section1bg.png) no-repeat center;
   background-attachment: fixed;
@@ -838,7 +845,6 @@ header .jumbotron .container a i:hover {
   * {
     font-size: 13px;
   }
-  html,
   body {
     overflow-x: hidden;
   }
@@ -898,9 +904,6 @@ header .jumbotron .container a i:hover {
   .about-img2 {
     display: none;
   }
-  .jumbotron {
-    height: 91vh;
-  }
   .jumbotron .container .display-3 {
     width: 80%;
     font-size: 3rem;
@@ -939,15 +942,6 @@ header .jumbotron .container a i:hover {
   }
   #footer .container-fluid .foot .logo {
     padding-top: 1rem;
-  }
-  .jumbotron,
-  #pricing,
-  #footer,
-  #about,
-  #contact {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center !important;
   }
 }
 
