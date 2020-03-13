@@ -1,6 +1,57 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   * {
     font-size: 13px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    .burger {
+      display: block !important;
+    }
+
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+      background-color: color(accent1);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+      background-color: color(accent1);
+    }
+
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 91vh;
+      top: 9vh;
+      background-color: #323539a9;
+      // background-color: red;
+      flex-direction: column;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+
+      #contactLink {
+        a {
+          color: color(textColor) !important;
+          background-color: color(accent1);
+          border: 2px solid color(accent1) !important;
+        }
+      }
+
+      li {
+        opacity: 0;
+      }
+    }
+  }
+
+  .nav-active {
+    transform: translateX(0%) !important;
   }
 
   .about-img1 {
@@ -28,5 +79,24 @@
     span {
       color: color(textColor);
     }
+  }
+
+  #footer {
+    height: auto;
+    .container-fluid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
