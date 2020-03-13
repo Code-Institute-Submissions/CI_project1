@@ -21,7 +21,7 @@ body {
 nav {
   background: linear-gradient(to left, #131313, #303030);
   top: 0;
-  position: fixed;
+  position: sticky;
   box-shadow: 3px 3px 20px 0px rgba(10, 10, 10, 0.3);
   display: flex;
   justify-content: space-around;
@@ -113,7 +113,6 @@ nav {
 
 header {
   min-height: 91vh;
-  // overflow: hidden;
 
   .jumbotron {
     display: flex;
