@@ -7,16 +7,10 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  position: relative;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
+// html {
+//   height: 100%;
+//   width: 100%;
+// }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -25,7 +19,6 @@ body {
 }
 
 nav {
-  // background: linear-gradient(to left, #232526, #414345);
   background: linear-gradient(to left, #131313, #303030);
   top: 0;
   position: fixed;

@@ -94,17 +94,6 @@ input:-webkit-autofill {
           box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  position: relative;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #323539;
@@ -850,6 +839,10 @@ header .jumbotron .container a i:hover {
 @media screen and (max-width: 768px) {
   * {
     font-size: 13px;
+  }
+  html,
+  body {
+    overflow-x: hidden;
   }
   nav .burger {
     display: block !important;

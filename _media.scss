@@ -3,9 +3,10 @@
     font-size: 13px;
   }
 
-  // body {
-  //   overflow-x: hidden;
-  // }
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
   nav {
     .burger {
