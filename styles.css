@@ -94,6 +94,11 @@ input:-webkit-autofill {
           box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -947,6 +952,15 @@ header .jumbotron .container a i:hover {
   }
   #footer .container-fluid .foot .logo {
     padding-top: 1rem;
+  }
+  .jumbotron,
+  #pricing,
+  #footer,
+  #about,
+  #contact {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
   }
 }
 
