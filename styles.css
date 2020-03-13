@@ -221,7 +221,6 @@ nav .nav-links #contactLink a:hover {
 
 header {
   min-height: 91vh;
-  overflow: hidden;
 }
 
 header .jumbotron {
@@ -845,10 +844,6 @@ header .jumbotron .container a i:hover {
   text-align: center;
   padding-bottom: 0.5rem;
   font-size: 0.6rem;
-}
-
-.page {
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
