@@ -66,6 +66,27 @@
     display: none;
   }
 
+  .jumbotron {
+    .container {
+      .display-3 {
+        width: 80%;
+        font-size: 3rem;
+        text-align: center;
+        padding: 0;
+        align-self: center;
+      }
+      .display-4 {
+        padding: 0;
+        align-self: center;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
   .about {
     .about-text {
       width: 100% !important;
@@ -82,10 +103,16 @@
   }
 
   #footer {
-    height: auto;
     .container-fluid {
+      height: 91vh;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
+
+      .foot {
+        .logo {
+          padding-top: 3rem;
+        }
+      }
     }
   }
 }
