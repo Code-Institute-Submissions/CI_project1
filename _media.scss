@@ -125,6 +125,14 @@
       }
     }
   }
+
+  .jumbotron,
+  #pricing,
+  #about,
+  #contact {
+    background-attachment: scroll !important;
+    background-position: center;
+  }
 }
 
 @keyframes navFade {
