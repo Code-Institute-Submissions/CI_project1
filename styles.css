@@ -981,6 +981,13 @@ header .jumbotron .container a i:hover {
   #footer .container-fluid .foot .logo {
     padding-top: 1rem;
   }
+  .jumbotron,
+  #pricing,
+  #about,
+  #contact {
+    background-attachment: scroll !important;
+    background-position: center;
+  }
 }
 
 @-webkit-keyframes navFade {
