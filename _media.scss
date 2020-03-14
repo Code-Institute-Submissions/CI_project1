@@ -110,7 +110,12 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
 
+      .map {
+        max-height: 45.5vh;
+      }
+
       .foot {
+        max-height: 45.5vh;
         .logo {
           padding-top: 1rem;
         }
