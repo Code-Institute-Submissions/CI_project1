@@ -182,6 +182,7 @@ nav .nav-links a {
   font-family: 'Quicksand';
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 0.4rem 0.6rem;
   letter-spacing: 2px;
   color: #f1ecec;
   text-decoration: none;
@@ -344,6 +345,10 @@ header .jumbotron .container a i:hover {
 .filler .container .blockquote-footer {
   color: #f1ececa8;
   font-size: 1.5rem;
+}
+
+#about1 {
+  padding: 9vh 0;
 }
 
 #about {
