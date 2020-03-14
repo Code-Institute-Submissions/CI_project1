@@ -9,6 +9,8 @@
   }
 
   nav {
+    position: fixed;
+    width: 100%;
     .burger {
       display: block !important;
     }
@@ -69,6 +71,7 @@
   }
 
   .jumbotron {
+    height: 100vh;
     .container {
       .display-3 {
         width: 80%;
@@ -121,14 +124,6 @@
         }
       }
     }
-  }
-
-  .jumbotron,
-  #pricing,
-  #about,
-  #contact {
-    background-attachment: scroll !important;
-    background-position: center;
   }
 }
 

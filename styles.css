@@ -880,6 +880,10 @@ header .jumbotron .container a i:hover {
   body {
     overflow-x: hidden;
   }
+  nav {
+    position: fixed;
+    width: 100%;
+  }
   nav .burger {
     display: block !important;
   }
@@ -936,6 +940,9 @@ header .jumbotron .container a i:hover {
   .about-img2 {
     display: none;
   }
+  .jumbotron {
+    height: 100vh;
+  }
   .jumbotron .container .display-3 {
     width: 80%;
     font-size: 3rem;
@@ -980,13 +987,6 @@ header .jumbotron .container a i:hover {
   }
   #footer .container-fluid .foot .logo {
     padding-top: 1rem;
-  }
-  .jumbotron,
-  #pricing,
-  #about,
-  #contact {
-    background-attachment: scroll !important;
-    background-position: center;
   }
 }
 
