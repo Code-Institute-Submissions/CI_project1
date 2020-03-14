@@ -823,6 +823,28 @@ header .jumbotron .container a i:hover {
   text-align: center;
 }
 
+#footer .container-fluid .foot .address span {
+  color: #f1ecec;
+}
+
+#footer .container-fluid .foot .address a {
+  text-decoration: none;
+  color: #f1ecec;
+}
+
+#footer .container-fluid .foot .address a:hover {
+  color: #ff3232;
+}
+
+#footer .container-fluid .foot .footer-links a {
+  text-decoration: none;
+  color: #e03a3a;
+}
+
+#footer .container-fluid .foot .footer-links a:hover {
+  color: #fffdfdf3;
+}
+
 #footer .container-fluid .foot .footer-links {
   -ms-flex-item-align: end;
       align-self: flex-end;
