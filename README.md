@@ -40,8 +40,12 @@ Website uses shades red(associated with strength and passion), black and white t
 
 
 ## Technologies Used
-Coding Languages: HTML5, CSS3, SCSS, Javascript  
+Coding Languages: HTML5, CSS3, SCSS, Javascript 
+
+
 CSS Frameworks: Bootstrap 4
+
+
 Fontawesome, Google fonts
 
 ## Testing
@@ -72,10 +76,12 @@ Footer:
 - Prompt to call our number when click on contact number 
 
 ### Responsiveness
-Works on all devices of diffenrent sizes.
-Navbar shrinks to burger button when device width less than 768px 
-Burger nav toggles side navbar, collapse when clicked on second time.
-All links in burger nav scrolls to respective sections.
+Works on all devices of different sizes.  
+Navbar shrinks to burger button when device width less than 768px  
+Burger nav toggles side navbar, collapse when clicked on second time.  
+All links in burger nav scrolls to respective sections.  
+
+
 
 
 
